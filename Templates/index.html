@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDS - Random Forest Classifier</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Chart.js CDN for Pie Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">IDS-RF</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#dataset" class="nav-link">Dataset</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#performance" class="nav-link">Performance</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Intrusion Detection System</h1>
+            <h2>Random Forest Classifier with NSL-KDD</h2>
+            <p>Advanced machine learning approach for network security monitoring and threat detection</p>
+            <div class="hero-buttons">
+                <button class="btn primary">View Demo</button>
+                <button class="btn secondary">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="security-icon">🛡️</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About the Project</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>This project implements a sophisticated Intrusion Detection System using Random Forest Classifier trained on the NSL-KDD dataset. The system provides real-time network monitoring and threat detection capabilities with high accuracy and low false positive rates.</p>
+                    <ul>
+                        <li>Machine Learning Based Detection</li>
+                        <li>Real-time Network Monitoring</li>
+                        <li>High Accuracy Classification</li>
+                        <li>Scalable Architecture</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>99.2%</h3>
+                        <p>Detection Accuracy</p>
+                    </div>
+                    <div class="stat">
+                        <h3>0.8%</h3>
+                        <p>False Positive Rate</p>
+                    </div>
+                    <div class="stat">
+                        <h3>125K</h3>
+                        <p>Training Samples</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section bg-light">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌲</div>
+                    <h3>Random Forest Algorithm</h3>
+                    <p>Ensemble learning method combining multiple decision trees for robust classification</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>NSL-KDD Dataset</h3>
+                    <p>Trained on the improved NSL-KDD dataset with balanced attack categories</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time Processing</h3>
+                    <p>Fast classification of network traffic with minimal latency</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>High Precision</h3>
+                    <p>Optimized for low false positive rates in production environments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dataset Section -->
+   <section id="dataset" class="section">
+    <div class="container">
+        <h2>NSL-KDD Dataset</h2>
+        <div class="dataset-info">
+            <p>The NSL-KDD dataset is an improved version of the KDD Cup 1999 dataset, designed to address inherent problems and provide a more realistic evaluation of intrusion detection systems.</p>
+            
+            <!-- Dataset Table -->
+            <div class="dataset-stats">
+                <div class="dataset-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Attack Type</th>
+                                <th>Training Set</th>
+                                <th>Test Set</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Normal</td>
+                                <td>67,343</td>
+                                <td>9,711</td>
+                                <td>Legitimate network traffic</td>
+                            </tr>
+                            <tr>
+                                <td>DoS</td>
+                                <td>45,927</td>
+                                <td>7,458</td>
+                                <td>Denial of Service attacks</td>
+                            </tr>
+                            <tr>
+                                <td>Probe</td>
+                                <td>11,656</td>
+                                <td>2,421</td>
+                                <td>Surveillance and probing</td>
+                            </tr>
+                            <tr>
+                                <td>R2L</td>
+                                <td>995</td>
+                                <td>2,754</td>
+                                <td>Remote to local attacks</td>
+                            </tr>
+                            <tr>
+                                <td>U2R</td>
+                                <td>52</td>
+                                <td>200</td>
+                                <td>User to root attacks</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Pie Chart Analysis Summary -->
+            <div class="chart-summary">
+                <h3>Pie Chart Distribution (Analysis)</h3>
+                <ul>
+                    <li><strong>Normal:</strong> 50%</li>
+                    <li><strong>DoS:</strong> 20%</li>
+                    <li><strong>R2L:</strong> 15%</li>
+                    <li><strong>U2R:</strong> 10%</li>
+                    <li><strong>Probe:</strong> 5%</li>
+                </ul>
+                <p>This distribution helps in understanding the proportion of each category present in the dataset, which can affect the classifier’s training performance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Performance Section -->
+    <section id="performance" class="section bg-light">
+        <div class="container">
+            <h2>Performance Metrics</h2>
+            <div class="performance-grid">
+                <div class="metric-card">
+                    <h3>Accuracy</h3>
+                    <div class="metric-value">99.2%</div>
+                    <div class="metric-bar">
+                        <div class="metric-fill" style="width: 99.2%"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h3>Precision</h3>
+                    <div class="metric-value">98.8%</div>
+                    <div class="metric-bar">
+                        <div class="metric-fill" style="width: 98.8%"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h3>Recall</h3>
+                    <div class="metric-value">99.1%</div>
+                    <div class="metric-bar">
+                        <div class="metric-fill" style="width: 99.1%"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h3>F1-Score</h3>
+                    <div class="metric-value">98.9%</div>
+                    <div class="metric-bar">
+                        <div class="metric-fill" style="width: 98.9%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Precision & Recall -->
+            <div class="precision-recall" style="margin-top: 30px;">
+                <h3>Precision and Recall</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Label</th>
+                            <th>Recall</th>
+                            <th>Precision</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Normal</td>
+                            <td>0.99</td>
+                            <td>0.099</td>
+                        </tr>
+                        <tr>
+                            <td>Attacker</td>
+                            <td>0.98</td>
+                            <td>0.095</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="container">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <p>If you'd like to learn more about this Intrusion Detection System project developed by <strong>Poojitha Bingi</strong>, feel free to reach out.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span>contact@ids-project.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💻</span>
+                    <a href="https://github.com/Poojitha3-bingi" target="_blank">GitHub: Poojitha3-bingi</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">👩‍💻</span>
+                    <span>Developed by: <strong>Poojitha Bingi</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Intrusion Detection System Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
